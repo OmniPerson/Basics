@@ -1,6 +1,4 @@
-﻿List<string> legumeTEST = new List<string>(){ "onions", "cucumber", "harbuz", "apples"};
-
-var items = String.Join("," , legumeTEST);
+﻿
 //Homework
 //make 3 lists all containing diffrent items, from whisc tasks, groceries and whatever {check}
 //allow user imput to determine which list gets selected 
@@ -9,50 +7,59 @@ var items = String.Join("," , legumeTEST);
 
 //HW-07-08-22
 
-List<string> tasks = new List<string>(){ "publish", "rectify", "endorse"};
-List<string> groceries = new List<string>(){ "apple", "flour", "eggs"};
-List<string> whatevers = new List<string>(){ "pen", "book", "crayons"};
+List<string> tasks = new List<string>() { "publish", "rectify", "endorse" };
+List<string> groceries = new List<string>() { "apple", "flour", "eggs" };
+List<string> whatevers = new List<string>() { "pen", "book", "crayons" };
 var taskarray = String.Join(",", tasks);
 var groceriesarray = String.Join(",", groceries);
 var whateversarray = String.Join(",", whatevers);
-Console.WriteLine("Which list do you wish to display?");
+Menu menu = new Menu("Main Menu");
+MenuItem item1 = new MenuItem("Tasks");
+MenuItem item2 = new MenuItem("Groceries");
+MenuItem item3 = new MenuItem("Whatevers");
+menu.Items.Add(item1);
+menu.Items.Add(item2);
+menu.Items.Add(item3);
 
-string? choice = Console.ReadLine();
 
-switch (choice)
+Menu menu2 = new Menu("Which list do you wish to display?", new List<MenuItem>(){
+  item1,
+  item2,
+  item3
+});
+
+
+
+while (true)
 {
+    Console.WriteLine(menu2.Title);
+//TASK: display each menu item from menu 2
+//TASK2 : get rid of the joins , print each item on a new line
+//Foreach loop -> display items
+    string? choice = Console.ReadLine();
 
-case "tasks":
-Console.WriteLine($"The list contains the following items: {taskarray} ;");
-break;
+    switch (choice)
+    {
 
-case "groceries":
-Console.WriteLine($"The list contains the following items: {groceriesarray} ;");
-break;
+        case "tasks":
+            Console.WriteLine($"The list contains the following items: {taskarray} ;");
+            break;
 
-case "whatevers":
-Console.WriteLine($"The list contains the following items: {whateversarray} ;");
-break;
+        case "groceries":
+            Console.WriteLine($"The list contains the following items: {groceriesarray} ;");
+            break;
 
-default:
-Console.WriteLine("There is no such item in the list category");
-break;
+        case "whatevers":
+            Console.WriteLine($"The list contains the following items: {whateversarray} ;");
+            break;
+
+        default:
+            Console.WriteLine("There is no such item in the list category");
+            break;
 
 
-
+    }
 
 }
-  
-  if (choice == "tasks"){
-    Console.WriteLine( $"The list contains the following items: {taskarray} ;" ) ;
-  }
-else if (choice == "groceries"){
-    Console.WriteLine($"The list contains the following items: {groceriesarray} ;");
 
-}
-else if (choice == "whatevers"){
-    Console.WriteLine($"The list contains the following items: {whateversarray} ;");
-}
-else {
-Console.WriteLine("There are no items matching your choice!");
-}
+

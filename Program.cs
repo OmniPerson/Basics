@@ -10,9 +10,9 @@
 List<string> tasks = new List<string>() { "publish", "rectify", "endorse" };
 List<string> groceries = new List<string>() { "apple", "flour", "eggs" };
 List<string> whatevers = new List<string>() { "pen", "book", "crayons" };
-var taskarray = String.Join(",", tasks);
-var groceriesarray = String.Join(",", groceries);
-var whateversarray = String.Join(",", whatevers);
+//var taskarray = String.Join(",", tasks);
+//var groceriesarray = String.Join(",", groceries);
+//var whateversarray = String.Join(",", whatevers);
 Menu menu = new Menu("Main Menu");
 MenuItem item1 = new MenuItem("Tasks");
 MenuItem item2 = new MenuItem("Groceries");
@@ -32,7 +32,13 @@ Menu menu2 = new Menu("Which list do you wish to display?", new List<MenuItem>()
 
 while (true)
 {
+    for(int i = 0; i <= 5; i++){
+        Console.WriteLine("-");
+    }
     Console.WriteLine(menu2.Title);
+Console.WriteLine($"Type 'tasks' to display the items contained in the -{item1.Label}- list!");
+Console.WriteLine($"Type 'groceries' to display the items contained in the -{item2.Label}- list!");
+Console.WriteLine($"Type 'groceries' to display the items contained in the -{item3.Label}- list!");
 //TASK: display each menu item from menu 2
 //TASK2 : get rid of the joins , print each item on a new line
 //Foreach loop -> display items
@@ -42,15 +48,15 @@ while (true)
     {
 
         case "tasks":
-            Console.WriteLine($"The list contains the following items: {taskarray} ;");
+            Console.WriteLine($"The list contains the following items: {item1.Label} ;");
             break;
 
         case "groceries":
-            Console.WriteLine($"The list contains the following items: {groceriesarray} ;");
+            Console.WriteLine($"The list contains the following items: {item2.Label} ;");
             break;
 
         case "whatevers":
-            Console.WriteLine($"The list contains the following items: {whateversarray} ;");
+            Console.WriteLine($"The list contains the following items: {item3.Label} ;");
             break;
 
         default:

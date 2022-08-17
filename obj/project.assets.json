@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\ginth\\.nuget\\packages\\": {}
+    "C:\\Users\\Alex\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ginth\\Documents\\GitHub\\Basics\\Basics.csproj",
+      "projectUniqueName": "C:\\Proiecte\\Basics\\Basics\\Basics.csproj",
       "projectName": "Basics",
-      "projectPath": "C:\\Users\\ginth\\Documents\\GitHub\\Basics\\Basics.csproj",
-      "packagesPath": "C:\\Users\\ginth\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ginth\\Documents\\GitHub\\Basics\\obj\\",
+      "projectPath": "C:\\Proiecte\\Basics\\Basics\\Basics.csproj",
+      "packagesPath": "C:\\Users\\Alex\\.nuget\\packages\\",
+      "outputPath": "C:\\Proiecte\\Basics\\Basics\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ginth\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\Alex\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"

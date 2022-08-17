@@ -38,7 +38,7 @@ while (true)
     Console.WriteLine(menu2.Title);
 Console.WriteLine($"Type 'tasks' to display the items contained in the -{item1.Label}- list!");
 Console.WriteLine($"Type 'groceries' to display the items contained in the -{item2.Label}- list!");
-Console.WriteLine($"Type 'groceries' to display the items contained in the -{item3.Label}- list!");
+Console.WriteLine($"Type 'whatevers' to display the items contained in the -{item3.Label}- list!");
 //TASK: display each menu item from menu 2
 //TASK2 : get rid of the joins , print each item on a new line
 //Foreach loop -> display items
@@ -69,3 +69,9 @@ Console.WriteLine($"Type 'groceries' to display the items contained in the -{ite
 }
 
 
+foreach (object o in tasks)
+{
+Console.WriteLine(o);
+
+
+}

@@ -1,6 +1,5 @@
 ﻿
 
-
 List<string> tasks = new List<string>() { "publish", "rectify", "endorse" };
 List<string> groceries = new List<string>() { "apple", "flour", "eggs" };
 List<string> whatevers = new List<string>() { "pen", "book", "crayons" };
@@ -20,10 +19,13 @@ while (true)
     {
         Console.Write("-");
     }
+
     Console.WriteLine();
     Console.WriteLine(menu.Title);
+    
     foreach (MenuItem item in menu.Items)
     {
+        
         Console.WriteLine($"Type '{item.Label.ToLower()}' to display the items contained in the -{item.Label}- list!");
     }
 
